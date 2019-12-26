@@ -1,0 +1,40 @@
+<a [routerLink]="['/']">
+  <h1>My Store</h1>
+</a>
+
+<a [routerLink]="['/cart']" class="button fancy-button"><i class="material-icons">shopping_cart</i>Checkout</a>
+
+<div class="shep-bar shep-top shep-black shep-large" style="z-index:4">
+  <button class="shep-bar-item shep-button shep-hide-large shep-hover-none shep-hover-text-light-grey" onclick="w3_open();"><img src="images/MenuW24.png" />  Menu</button>
+  <span class="shep-bar-item shep-right"><img src="images/sheepIcon_blue32.png" /></span>
+  <span class="shep-bar-item shep-center">Shepherding Tools</span>
+</div>
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
