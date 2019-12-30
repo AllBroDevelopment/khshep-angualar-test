@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { MenuItem } from '../menu-item';
+import { MenuItems } from '../menu-items';
+
 @Component({
   selector: 'app-top-bar',
   templateUrl: './top-bar.component.html',
@@ -8,6 +11,15 @@ import { Component, OnInit } from '@angular/core';
 export class TopBarComponent implements OnInit {
 
   constructor() { }
+
+  // A list of all menu items
+  menuData = MenuItems;
+
+  // Keeping track of menu item that is selected so that we know which to mark and what to
+  selectedMenuItem: MenuItems[0];
+  menuClick(menuItem: MenuItem): void {
+    this.selectedMenuItem = menuItem;
+  }
 
   // Toggle between showing and hiding the sidebar, and add overlay effect
   openMenu($event) {

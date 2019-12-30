@@ -5,7 +5,7 @@
 <a [routerLink]="['/cart']" class="button fancy-button"><i class="material-icons">shopping_cart</i>Checkout</a>
 
 <div class="shep-bar shep-top shep-black shep-large" style="z-index:4">
-  <button class="shep-bar-item shep-button shep-hide-large shep-hover-none shep-hover-text-light-grey" (click)="openMenu($event)"><img src="src/assets/images/MenuW24.png" />  Menu</button>
+  <button class="shep-bar-item shep-button shep-hide-large shep-hover-none shep-hover-text-light-grey" (click)="openMenu($event)"><img src="assets/images/MenuW24.png" />  Menu</button>
   <span class="shep-bar-item shep-right"><img src="src/assets/images/sheepIcon_blue32.png" /></span>
   <span class="shep-bar-item shep-center">Shepherding Tools</span>
 </div>
@@ -15,22 +15,10 @@
 <nav class="shep-sidebar shep-collapse shep-white shep-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
   <div class="shep-bar-block">
     <a href="#" class="shep-bar-item shep-button shep-padding-16 shep-hide-large shep-dark-grey shep-hover-black" (click)="closeMenu($event)" title="close menu"><img src="src/assets/images/X32.png" />&nbsp;Close Menu</a>
-    <a href="#" class="shep-bar-item shep-button shep-padding  shep-bluejw"><img src="src/assets/images/Overview32.png" />&nbsp;Overview</a>
-    <a href="#" class="shep-bar-item shep-button shep-padding"><img src="src/assets/images/Congregation32.png" />&nbsp;Congregation</a>
-    <a href="#" class="shep-bar-item shep-button shep-padding"><img src="src/assets/images/CLM32.png" />&nbsp;Life and Ministry</a>
-    <a href="#" class="shep-bar-item shep-button shep-padding"><img src="src/assets/images/PublicTalk32.png" />&nbsp;Public Talk</a>
-    <a href="#" class="shep-bar-item shep-button shep-padding"><img src="src/assets/images/PublicSpeaker32.png" />&nbsp;Speakers</a>
-    <a href="#" class="shep-bar-item shep-button shep-padding"><img src="src/assets/images/Outlines32.png" />&nbsp;Outlines</a>
-    <a href="#" class="shep-bar-item shep-button shep-padding"><img src="src/assets/images/Sound32.png" />&nbsp;Sound</a>
-    <a href="#" class="shep-bar-item shep-button shep-padding"><img src="src/assets/images/Cleaning32.png" />&nbsp;Cleaning</a>
-    <a href="#" class="shep-bar-item shep-button shep-padding"><img src="src/assets/images/OutsideCare32.png" />&nbsp;Outside Care</a>
-    <a href="#" class="shep-bar-item shep-button shep-padding"><img src="src/assets/images/Territory32.png" />&nbsp;Territories</a>
-    <a href="#" class="shep-bar-item shep-button shep-padding shep-bluejw"><img src="src/assets/images/FSG32.png" />&nbsp;Service Groups</a>
-    <a href="#" class="shep-bar-item shep-button shep-padding"><img src="src/assets/images/PublicWitnessing32.png" />&nbsp;Public Witnessing</a>
-    <a href="#" class="shep-bar-item shep-button shep-padding"><img src="src/assets/images/ServiceReport32.png" />&nbsp;Service Reports</a>
-    <a href="#" class="shep-bar-item shep-button shep-padding"><img src="src/assets/images/DataExchange32.png" />&nbsp;Data Exchange</a>
-    <a href="#" class="shep-bar-item shep-button shep-padding"><img src="src/assets/images/Settings32.png" />&nbsp;Settings</a>
-    <a href="#" class="shep-bar-item shep-button shep-padding"><img src="src/assets/images/About32.png" />&nbsp;About</a><br><br><br>
+    <div *ngFor="let menuItem of menuData" (click)='menuSelect(menuItem)'>
+      <a href="{{menuItem.target}}" class="shep-bar-item shep-button shep-padding {{menuItem.classes}}"><img src="{{menuItem.image}}" />&nbsp;{{menuItem.title}}</a>
+    </div>
+    <br><br><br>
   </div>
 </nav>
 
