@@ -1,3 +1,3 @@
-# khshep-angualar-test
+# khshep-angular-dev
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/khshep-angualar-test)
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/khshep-angular-dev)
