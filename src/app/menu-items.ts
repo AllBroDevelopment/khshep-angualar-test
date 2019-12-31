@@ -16,7 +16,7 @@ export const MenuItems: MenuItem[] = [
   {target: 'publicWitnessing', image: 'assets/images/PublicWitnessing32.png', title: 'Public Witnessing', classes: '', display: true},
   {target: 'serviceReports', image: 'assets/images/ServiceReport32.png', title: 'Service Report', classes: '', display: true},
   {target: 'dataExchange', image: 'assets/images/DataExchange32.png', title: 'Data Exchange', classes: '', display: true},
-  {target: 'settings', image: 'assets/images/Settings32.png', title: 'Settings'},
-  {target: 'about', image: 'assets/images/About32.png', title: 'About'}
+  {target: 'settings', image: 'assets/images/Settings32.png', title: 'Settings', classes: '', display: true},
+  {target: 'about', image: 'assets/images/About32.png', title: 'About', classes: '', display: true}
 ];    
 
