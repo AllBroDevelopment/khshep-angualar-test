@@ -1,22 +1,16 @@
-<a [routerLink]="['/']">
-  <h1>My Store</h1>
-</a>
-
-<a [routerLink]="['/cart']" class="button fancy-button"><i class="material-icons">shopping_cart</i>Checkout</a>
-
 <div class="shep-bar shep-top shep-black shep-large" style="z-index:4">
-  <button class="shep-bar-item shep-button shep-hide-large shep-hover-none shep-hover-text-light-grey" (click)="openMenu($event)"><img src="assets/images/MenuW24.png" />  Menu</button>
+  <button class="shep-bar-item shep-button shep-hide-large shep-hover-none shep-hover-text-light-grey" (click)="openMenu($event)"><img src="assets/images/MenuW24.png" />&nbsp;Menu</button>
   <span class="shep-bar-item shep-right"><img src="src/assets/images/sheepIcon_blue32.png" /></span>
   <span class="shep-bar-item shep-center">Shepherding Tools</span>
 </div>
 
 
 <!-- Sidebar/menu -->
-<nav class="shep-sidebar shep-collapse shep-white shep-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+<nav class="shep-sidebar shep-collapse shep-white shep-animate-left" style="z-index:3;width:300px;" id="mySidebar">
   <div class="shep-bar-block">
     <a href="#" class="shep-bar-item shep-button shep-padding-16 shep-hide-large shep-dark-grey shep-hover-black" (click)="closeMenu($event)" title="close menu"><img src="src/assets/images/X32.png" />&nbsp;Close Menu</a>
     <div *ngFor="let menuItem of menuData" (click)='menuSelect(menuItem)'>
-      <a href="{{menuItem.target}}" class="shep-bar-item shep-button shep-padding {{menuItem.classes}}"><img src="{{menuItem.image}}" />&nbsp;{{menuItem.title}}</a>
+      <a [routerLink]="[menuItem.target]" [class.selectedMenuItem]="menuItem === selectedMenuItem" class="shep-bar-item shep-button shep-padding {{menuItem.classes}}"><img src="{{menuItem.image}}" />&nbsp;{{menuItem.title}}</a>
     </div>
     <br><br><br>
   </div>

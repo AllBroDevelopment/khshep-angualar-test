@@ -10,14 +10,16 @@ import { MenuItems } from '../menu-items';
 })
 export class TopBarComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+  }
 
   // A list of all menu items
   menuData = MenuItems;
 
   // Keeping track of menu item that is selected so that we know which to mark and what to
-  selectedMenuItem: MenuItems[0];
-  menuClick(menuItem: MenuItem): void {
+  selectedMenuItem = MenuItems[0];
+  menuSelect(menuItem: MenuItem): void {
+    console.log('Selecting Menu Item: ' + menuItem.title );
     this.selectedMenuItem = menuItem;
   }
 
@@ -51,6 +53,8 @@ export class TopBarComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.selectedMenuItem = MenuItems[0];
+    this.selectedMenuItem.classes = "selectedMenuItem";
   }
 
 }

@@ -52,7 +52,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .shep-dropdown-hover:hover > .shep-button:first-child,.shep-dropdown-click:hover > .shep-button:first-child{background-color:#ccc;color:#000}
 .shep-dropdown-content{cursor:auto;color:#000;background-color:#fff;display:none;position:absolute;min-width:160px;margin:0;padding:0;z-index:1}
 .shep-check,.shep-radio{width:24px;height:24px;position:relative;top:6px}
-.shep-sidebar{height:100%;width:200px;background-color:#fff;position:fixed!important;z-index:1;overflow:auto}
+.shep-sidebar{height:90%;width:200px;background-color:#fff;position:fixed!important;z-index:1;overflow:auto}
 .shep-bar-block .shep-dropdown-hover,.shep-bar-block .shep-dropdown-click{width:100%}
 .shep-bar-block .shep-dropdown-hover .shep-dropdown-content,.shep-bar-block .shep-dropdown-click .shep-dropdown-content{min-width:100%}
 .shep-bar-block .shep-dropdown-hover .shep-button,.shep-bar-block .shep-dropdown-click .shep-button{width:100%;text-align:left;padding:8px 16px}
@@ -149,7 +149,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .shep-amber,.shep-hover-amber:hover{color:#000!important;background-color:#ffc107!important}
 .shep-aqua,.shep-hover-aqua:hover{color:#000!important;background-color:#00ffff!important}
 .shep-blue,.shep-hover-blue:hover{color:#fff!important;background-color:#2196F3!important}
-.shep-bluejw,.shep-hover-bluejw:hover{color:#fff!important;background-color:#306CAB!important}
+.shep-bluejw,.shep-hover-bluejw:hover,.selectedMenuItem{color:#fff!important;background-color:#306CAB!important}
 .shep-light-blue,.shep-hover-light-blue:hover{color:#000!important;background-color:#87CEEB!important}
 .shep-brown,.shep-hover-brown:hover{color:#fff!important;background-color:#795548!important}
 .shep-cyan,.shep-hover-cyan:hover{color:#000!important;background-color:#00bcd4!important}

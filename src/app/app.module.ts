@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -30,9 +30,26 @@ import { DataExchangeComponent } from './data-exchange/data-exchange.component';
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: ProductListComponent },
+      { path: '', component: OverviewComponent, data: { title: 'Overview' } }, // ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
-    ])
+      { path: 'settings', component: SettingsComponent, data: { title: 'Settings' } },
+      { path: 'about', component: AboutComponent, data: { title: 'About' } },
+      { path: 'overview', component: OverviewComponent, data: { title: 'Overview' } },
+      { path: 'congregation', component: CongregationComponent, data: { title: 'Congregation' } },
+      { path: 'clm', component: LifeAndMinistryComponent, data: { title: 'Live and Ministry Meeting' } },
+      { path: 'publicTalk', component: PublicTalkComponent, data: { title: 'Public Talk' } },
+      { path: 'speakers', component: SpeakersComponent, data: { title: 'Speakers' } },
+      { path: 'outlines', component: OutlinesComponent, data: { title: 'Outlines' } },
+      { path: 'sound', component: SoundComponent, data: { title: 'Sound' } },
+      { path: 'cleaning', component: CleaningComponent, data: { title: 'Cleaning' } },
+      { path: 'outsideCare', component: OutsideCareComponent, data: { title: 'Outside Care' } },
+      { path: 'territories', component: TerritoriesComponent, data: { title: 'Territories' } },
+      { path: 'serviceGroups', component: ServiceGroupsComponent, data: { title: 'Service Groups' } },
+      { path: 'publicWitnessing', component: PublicWitnessingComponent, data: { title: 'Public Witnessing' } },
+      { path: 'serviceReports', component: ServiceReportsComponent, data: { title: 'Service Reports' } },
+      { path: 'dataExchange', component: DataExchangeComponent, data: { title: 'Data Exchange' } }
+      //,{ path: '**', component: PageNotFoundComponent, data: { title: 'Heroes List' } }
+  ])
   ],
   declarations: [
     AppComponent,
